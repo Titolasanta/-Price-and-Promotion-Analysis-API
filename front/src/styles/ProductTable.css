@@ -1,0 +1,49 @@
+/* ProductTable.css */
+
+/* General table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  /* Row styles */
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  /* Highlight discounted products */
+  .discounted {
+    background-color: #f0f8ff;
+  }
+  
+  .discounted .product-name {
+    font-weight: bold;
+  }
+  
+  /* No discount cell styles */
+  .no-discount {
+    color: #888;
+  }
+  
+  /* Loading and error messages */
+  .loading, .error {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  

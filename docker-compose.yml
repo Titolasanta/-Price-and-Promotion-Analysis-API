@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  product-api:
+    build:
+      context: .
+      dockerfile: server/Dockerfile # Path to your .NET Dockerfile
+    ports:
+      - "5118:5118"
+    networks:
+      - app-network
+
+  react-app:
+    build:
+      context: .
+      dockerfile: front/Dockerfile # Path to your React Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+    depends_on:
+      - product-api
+
+networks:
+  app-network:
+    driver: bridge
